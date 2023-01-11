@@ -1,13 +1,15 @@
 import os
 import re
+
+subtitle_lang = "zh"
+video_suffix = (".mp4", ".mkv", ".avi", ".wmv", ".mov")
+subtitle_suffix = (".srt", ".ass")
+
 file_path = input("Please input video path (default current directory):")
 if file_path == '':
     file_path = "./"
 else:
     file_path += '/'
-subtitle_lang = "zh"
-video_suffix = (".mp4", ".mkv", ".avi", ".wmv", ".mov")
-subtitle_suffix = (".srt", ".ass")
 vs_match = {}
 
 videos = [i for i in os.listdir(file_path) if i.endswith(video_suffix)]
